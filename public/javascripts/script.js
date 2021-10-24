@@ -41,3 +41,35 @@ $(document).ready(function(){
     });
   
   });
+
+
+  function openForm() {
+    if (document.getElementById("myForm").style.display == "block"){
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("portfolioBtn").innerHTML = "Add a new contact";
+    }else{
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("portfolioBtn").innerHTML = "Remove";
+    }
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("portfolioBtn").innerHTML = "Add a new contact";
+  }
+  
+
+  document.getElementById("portfolioBtn")
+  .addEventListener('click', 
+  openForm)
+
+  function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
